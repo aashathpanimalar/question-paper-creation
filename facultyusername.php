@@ -9,7 +9,6 @@
         background-color: #f2f2f2;
         margin: 20px;
     }
-
     form {
         max-width: 400px;
         margin: 0 auto;

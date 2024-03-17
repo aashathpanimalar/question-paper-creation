@@ -21,9 +21,6 @@
 
         }
 
-
-
-
         input[type="text"] {
             width: 250px;
             padding: 5px;

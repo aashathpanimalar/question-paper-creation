@@ -9,6 +9,7 @@ if ($conn->connect_error) {
 @$Faculty = $_POST["faculty_id"];
 @$questionpaperid = $_POST["questionpaperid"];
 @$examtype = $_POST["examtype"];
+
 $sql = "SELECT *
         FROM questionpaperdetails
         JOIN partA ON questionpaperdetails.questionpaperid = partA.questionpaperid

@@ -19,7 +19,6 @@ $co = [];
 $b = [];
 $u = [];
 
-// Loop through each question
 for ($i = 1; $i <= 22; $i++) {
     // Get question, mark, and co values using variable variables
     @$questions[$i] = ($_POST["q$i"]);

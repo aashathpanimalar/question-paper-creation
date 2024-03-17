@@ -12,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
     // Loop through each question
     for ($i = 1; $i <= 22; $i++) {
         @$userInput = $_POST["q$i"];
