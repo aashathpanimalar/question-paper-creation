@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost:3307', 'root', '', 'test');
+$conn = new mysqli('localhost:3306', 'root', '', 'test');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -25,6 +25,7 @@ $stmt = $conn->prepare($sql);
     <style>
         fieldset {
             display: inline-block;
+            border: 1px solid black;
             width: 65%;
             padding: 3%;
         }
@@ -105,6 +106,7 @@ $stmt = $conn->prepare($sql);
         .left2 {
             text-align: left;
         }
+       
     </style>
 
 </head>
@@ -177,7 +179,7 @@ strategies of the software project
        <h3 class='displayinline'>Answer All the Question</h3>
        <hr>
        <h3 class='displayinline'>Part-A (10*2=20)</h3>
-       <table border='1'>
+       <table border='2'>
             
             <tr>
                     <th><b>Q.NO</b></th>
@@ -261,7 +263,7 @@ strategies of the software project
                 echo "
         <fieldset>
             <h3>Part-B (5*13=65)</h3>
-       <table border='1' style='display:inline-block;'>
+       <table border='1'>
              <tr>
                     <th><b>Q.NO</b></th>
                     <th><b>option</b></th>

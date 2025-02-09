@@ -97,7 +97,7 @@
 
 <body>
     <?php
-    $servername = "localhost:3307";
+    $servername = "localhost:3306";
     $username = "root";
     $password = "";
     $dbname = "test";
@@ -115,7 +115,7 @@
         @$column = $_POST["updateColumnName"];
 
         // Use single quotes around the value in the SQL query
-        $sql = "INSERT INTO keywords1 ($column) VALUES ('$data')";
+        $sql = "INSERT INTO keywords ($column) VALUES ('$data')";
 
         if ($conn->query($sql) === TRUE) {
             echo "<h4 class='text'>Data Uploaded Successfully!!<h4>";

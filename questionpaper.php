@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $servername = "localhost:3307";
+    $servername = "localhost:3306";
     $username = "root";
     $password = "";
     $dbname = "test";
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         @$userInput = $_POST["q$i"];
         $words = explode(" ", $userInput);
 
-        $sqlColumns = "SHOW COLUMNS FROM keywords1";
+        $sqlColumns = "SHOW COLUMNS FROM keywords";
         $resultColumns = $conn->query($sqlColumns);
 
         $matchedColumn = null;
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             while ($rowColumn = $resultColumns->fetch_assoc()) {
                 $columnName = $rowColumn["Field"];
 
-                $sql = "SELECT * FROM keywords1 WHERE $columnName = ?";
+                $sql = "SELECT * FROM keywords WHERE $columnName = ?";
                 $stmt = $conn->prepare($sql);
 
                 foreach ($words as $word) {
