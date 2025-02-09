@@ -105,6 +105,7 @@ foreach ($tables as $table) {
         }
     }
 }
+
 // Close connection
 $conn->close();
 ?>
